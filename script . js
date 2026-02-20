@@ -1,0 +1,51 @@
+let quizData = [];
+let currentQuestion = 0;
+let score = 0;
+
+function addQuestion() {
+const qText = document.getElementById("new-question").value;
+const options = [
+document.getElementById("opt0").value,
+document.getElementById("opt1").value,
+document.getElementById("opt2").value,
+document.getElementById("opt3").value
+];
+const correct = parseInt(document.getElementById("correct-idx").value);
+
+}
+
+function startQuiz() {
+if (quizData.length === 0) {
+alert("Please add at least one question first!");
+return;
+}
+document.getElementById("creation-section").style.display = "none";
+document.getElementById("quiz-display").style.display = "block";
+loadQuestion();
+}
+
+function loadQuestion() {
+const q = quizData[currentQuestion];
+document.getElementById("question-text").innerText = q.question;
+const container = document.getElementById("options-container");
+container.innerHTML = "";
+
+}
+
+function checkAnswer(selected) {
+if (selected === quizData[currentQuestion].correct) {
+score++;
+}
+currentQuestion++;
+if (currentQuestion < quizData.length) {
+loadQuestion();
+} else {
+showResults();
+}
+}
+
+function showResults() {
+document.getElementById("quiz-display").style.display = "none";
+document.getElementById("result-container").style.display = "block";
+document.getElementById("score-text").innerText = score + " / " + quizData.length;
+}
