@@ -1,0 +1,19 @@
+# CODSOFT Internship - Web Development
+
+## Project: Online Quiz Maker (Level 2 Task)
+This repository contains my submission for the Level 2 Task of the CodSoft Web Development Internship Program.
+
+### Features Included:
+- *Quiz Creation:* Users can add their own questions, options, and correct answers.
+- *Interactive Quiz:* A dynamic interface to take the quiz.
+- *Score Calculation:* Immediate feedback on the final score.
+- *Responsive Design:* Works across mobile and desktop devices.
+
+### Technologies Used:
+- HTML5
+- CSS3
+- JavaScript (ES6)
+
+### How to Run:
+1. Clone this repository.
+2. Open index.html in any web browser.
