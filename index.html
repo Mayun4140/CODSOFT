@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodSoft Online Quiz Maker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <div id="quiz-header">
+            <h2>CodSoft Online Quiz Maker</h2>
+        </div>
+
+        <div id="creation-section">
+            <h3>Step 1: Create Your Quiz</h3>
+            <input type="text" id="new-question" placeholder="Enter Question">
+            <input type="text" id="opt0" placeholder="Option 1">
+            <input type="text" id="opt1" placeholder="Option 2">
+            <input type="text" id="opt2" placeholder="Option 3">
+            <input type="text" id="opt3" placeholder="Option 4">
+            <input type="number" id="correct-idx" placeholder="Correct Option Index (0-3)">
+            <button class="btn green" onclick="addQuestion()">Add Question</button>
+            <hr>
+            <button class="btn" onclick="startQuiz()">Start Quiz with Added Questions</button>
+        </div>
+
+        <div id="quiz-display" style="display:none;">
+            <h3 id="question-text">Question?</h3>
+            <div id="options-container">
+                </div>
+        </div>
+
+        <div id="result-container" style="display:none;">
+            <h3>Your Final Score: <span id="score-text">0</span></h3>
+            <button class="btn" onclick="location.reload()">Create New Quiz</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
